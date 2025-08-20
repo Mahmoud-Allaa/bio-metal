@@ -101,7 +101,7 @@ export default function Navbar() {
               <NavButton 
                 key={item.key}
                 item={item}
-                className="block px-4 py-3 text-base font-medium font-accent text-primary-dark hover:text-primary-medium transition-elegant w-full text-left hover:bg-background-light tracking-wider uppercase"
+                className="block px-4 py-3 text-base font-medium font-accent text-white hover:text-primary-medium transition-elegant w-full text-left hover:bg-background-light tracking-wider uppercase"
               />
             ))}
           </div>
