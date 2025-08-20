@@ -4,6 +4,28 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /* Main Brand Colors */
+  --primary-dark: #0f3c6c;
+  --primary-medium: #4b5050;
+  --background-light: #d2dceb;
+  
+  /* Updated Color Palette */
+  --old-money-primary-500: #4b5050;
+  --old-money-primary-600: #0f3c6c;
+  --old-money-accent-500: #d2dceb;
+  --accent-500: #0f3c6c;
+  
+  /* Semantic Colors */
+  --text-primary: #0f3c6c;
+  --text-secondary: #4b5050;
+  --surface-primary: #d2dceb;
+  --surface-secondary: #ffffff;
+  --border-light: #4b5050;
+  --border-medium: #0f3c6c;
+  --border-accent: #4b5050;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,8 +37,8 @@ html {
 }
 
 body {
-  background: #fefcf9;
-  color: #2c1810;
+  background: var(--background-light);
+  color: var(--primary-dark);
   font-family: 'Crimson Text', Georgia, serif;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -29,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', 'Times New Roman', serif;
   font-weight: 600;
   letter-spacing: -0.02em;
-  color: #2c1810;
+  color: var(--primary-dark);
 }
 
 .font-accent {
@@ -38,8 +60,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Custom Selection */
 ::selection {
-  background: var(--old-money-accent-500);
-  color: #faf9f7;
+  background: var(--primary-dark);
+  color: var(--background-light);
 }
 
 /* Scrollbar Styling */
@@ -48,16 +70,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f5f3ef;
+  background: var(--background-light);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--old-money-primary-500);
+  background: var(--primary-medium);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--old-money-primary-600);
+  background: var(--primary-dark);
 }
 
 /* Elegant Animations for Old Money Aesthetic */
@@ -143,24 +165,26 @@ h1, h2, h3, h4, h5, h6 {
   animation-delay: 1.2s;
 }
 
-/* Old Money Button Styles */
+/* Modern Outline Button Styles */
 .btn-old-money {
-  background: linear-gradient(135deg, #9c8660, #8a7348);
-  color: #faf9f7;
-  border: 2px solid #8a7348;
+  background: transparent;
+  color: var(--primary-dark);
+  border: 2px solid var(--primary-dark);
   padding: 0.875rem 2rem;
   font-family: 'Cinzel', serif;
   font-weight: 500;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   font-size: 0.875rem;
-  border-radius: 0;
+  border-radius: 8px;
   position: relative;
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
+  /* backdrop-filter: blur(10px); */
+  box-shadow: 0 4px 6px -1px rgba(15, 60, 108, 0.1);
 }
 
 .btn-old-money::before {
@@ -170,57 +194,90 @@ h1, h2, h3, h4, h5, h6 {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.6s;
+  background: var(--primary-dark);
+  transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
 }
 
 .btn-old-money:hover::before {
-  left: 100%;
+  left: 0;
 }
 
 .btn-old-money:hover {
-  background: linear-gradient(135deg, #8a7348, #755f3a);
-  border-color: #755f3a;
+  color: var(--background-light);
+  border-color: var(--primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 10px 15px -3px rgba(44, 24, 16, 0.1), 0 4px 6px -2px rgba(44, 24, 16, 0.05);
+  box-shadow: 0 10px 15px -3px rgba(15, 60, 108, 0.2), 0 4px 6px -2px rgba(15, 60, 108, 0.1);
 }
 
 .btn-secondary {
   background: transparent;
-  color: #2c1810;
-  border: 2px solid #c4b8a4;
+  color: #D2DCEB;
+  border: 2px solid #D2DCEB;
+  padding: 0.875rem 2rem;
+  font-family: 'Cinzel', serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px -1px rgba(75, 80, 80, 0.1);
+}
+
+.btn-secondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--background-light);
+  transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.btn-secondary:hover::before {
+  left: 0;
 }
 
 .btn-secondary:hover {
-  background: #b09d82;
-  color: #faf9f7;
-  border-color: #b09d82;
+  color: var(--primary-dark);
+  border-color: var(--background-light);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(75, 80, 80, 0.2), 0 4px 6px -2px rgba(75, 80, 80, 0.1);
 }
 
 /* Elegant Card Styles */
 .card-old-money {
-  background: #faf9f7;
-  border: 1px solid #e8e4dc;
-  box-shadow: 0 4px 6px -1px rgba(44, 24, 16, 0.1), 0 2px 4px -1px rgba(44, 24, 16, 0.06);
+  background: var(--background-light);
+  border: 1px solid var(--primary-medium);
+  box-shadow: 0 4px 6px -1px rgba(15, 60, 108, 0.1), 0 2px 4px -1px rgba(15, 60, 108, 0.06);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-old-money:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 25px -5px rgba(44, 24, 16, 0.1), 0 10px 10px -5px rgba(44, 24, 16, 0.04);
-  border-color: #d8d1c4;
+  box-shadow: 0 20px 25px -5px rgba(15, 60, 108, 0.15), 0 10px 10px -5px rgba(15, 60, 108, 0.08);
+  border-color: var(--primary-dark);
 }
 
-/* Text Gradient for Luxury Feel */
+/* Text Gradient for Modern Feel */
 .text-gradient-gold {
-  background: linear-gradient(135deg, #9c8660, #755f3a, #c4a248);
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium), var(--background-light));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .text-gradient-navy {
-  background: linear-gradient(135deg, #2c4282, #1e2f5c);
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -248,7 +305,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #3c5aa6, #2c4282);
+  background: linear-gradient(90deg, var(--primary-dark), var(--primary-medium));
   transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -288,7 +345,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Focus Styles for Accessibility */
 .btn-old-money:focus,
 .link-elegant:focus {
-  outline: 2px solid var(--accent-500);
+  outline: 2px solid var(--primary-dark);
   outline-offset: 2px;
 }
 
@@ -303,3 +360,53 @@ h1, h2, h3, h4, h5, h6 {
     animation: none;
   }
 }
+
+/* Main Brand Color Utilities */
+.bg-primary-dark {
+  background-color: var(--primary-dark);
+}
+
+.bg-primary-medium {
+  background-color: var(--primary-medium);
+}
+
+.bg-light {
+  background-color: var(--background-light);
+}
+
+.text-primary-dark {
+  color: var(--primary-dark);
+}
+
+.text-primary-medium {
+  color: var(--primary-medium);
+}
+
+.border-primary-dark {
+  border-color: var(--primary-dark);
+}
+
+.border-primary-medium {
+  border-color: var(--primary-medium);
+}
+
+.border-light {
+  border-color: var(--background-light);
+}
+
+/* Gradient Utilities with Main Colors */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+}
+
+.bg-gradient-primary-light {
+  background: linear-gradient(135deg, var(--primary-medium), var(--background-light));
+}
+
+.text-gradient-primary {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+

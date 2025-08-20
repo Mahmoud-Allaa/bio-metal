@@ -54,13 +54,13 @@ export default function Hero() {
         className="h-screen"
       >
         {/* Elegant Custom Navigation Buttons */}
-        <div className="swiper-button-prev-custom absolute left-8 top-[85%] transform -translate-y-1/2 z-20 w-14 h-14 bg-stone-50/80 border border-stone-300 hover:bg-stone-100/90 transition-luxury backdrop-blur-md flex items-center justify-center cursor-pointer shadow-lg group">
-          <svg className="w-6 h-6 text-stone-800 group-hover:text-blue-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="swiper-button-prev-custom absolute left-8 top-[85%] transform -translate-y-1/2 z-20 w-14 h-14 bg-light/80 border border-primary-medium hover:bg-light/90 transition-luxury backdrop-blur-md flex items-center justify-center cursor-pointer shadow-lg group">
+          <svg className="w-6 h-6 text-main_light group-hover:text-primary-medium transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19l-7-7 7-7" />
           </svg>
         </div>
-        <div className="swiper-button-next-custom absolute right-8 top-[85%] transform -translate-y-1/2 z-20 w-14 h-14 bg-stone-50/80 border border-stone-300 hover:bg-stone-100/90 transition-luxury backdrop-blur-md flex items-center justify-center cursor-pointer shadow-lg group">
-          <svg className="w-6 h-6 text-stone-800 group-hover:text-blue-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="swiper-button-next-custom absolute right-8 top-[85%] transform -translate-y-1/2 z-20 w-14 h-14 bg-light/80 border border-primary-medium hover:bg-light/90 transition-luxury backdrop-blur-md flex items-center justify-center cursor-pointer shadow-lg group">
+          <svg className="w-6 h-6 text-main_light group-hover:text-primary-medium transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
           </svg>
         </div>

@@ -9,20 +9,20 @@ export default function AboutSection() {
   return (
     <motion.section 
       id="about" 
-      className="py-24 min-h-screen flex items-center justify-center bg-stone-100 relative overflow-hidden"
+      className="py-24 min-h-screen flex items-center justify-center bg-light relative overflow-hidden"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       viewport={{ once: true }}
     >
       {/* Elegant Background Patterns */}
-      <div className="absolute inset-0 bg-gradient-to-br from-amber-50/30 to-transparent"></div>
-      <div className="absolute top-32 right-32 w-96 h-96 bg-amber-100/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-32 left-32 w-80 h-80 bg-stone-200/30 rounded-full blur-2xl"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-background-light/30 to-transparent"></div>
+      <div className="absolute top-32 right-32 w-96 h-96 bg-primary-medium/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-32 left-32 w-80 h-80 bg-primary-dark/30 rounded-full blur-2xl"></div>
       
       {/* Decorative Lines */}
-      <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-stone-300 to-transparent"></div>
-      <div className="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-transparent via-stone-300 to-transparent"></div>
+      <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-primary-medium to-transparent"></div>
+      <div className="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-transparent via-primary-medium to-transparent"></div>
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <motion.div 
@@ -35,7 +35,7 @@ export default function AboutSection() {
           {/* Section Header */}
           <div className="text-center mb-20">
             <motion.div 
-              className="w-32 h-px bg-gradient-to-r from-transparent via-amber-600 to-transparent mx-auto mb-8"
+              className="w-32 h-px bg-gradient-to-r from-transparent via-primary-dark to-transparent mx-auto mb-8"
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
@@ -43,7 +43,7 @@ export default function AboutSection() {
             />
             
             <motion.h2 
-              className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-stone-800 mb-8 tracking-wide"
+              className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-primary-dark mb-8 tracking-wide"
               initial={{ y: 40, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -53,7 +53,7 @@ export default function AboutSection() {
             </motion.h2>
             
             <motion.p 
-              className="font-body text-xl md:text-2xl text-stone-600 mb-6 leading-relaxed max-w-4xl mx-auto"
+              className="font-body text-xl md:text-2xl text-primary-medium mb-6 leading-relaxed max-w-4xl mx-auto"
               initial={{ y: 40, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.5 }}
@@ -65,7 +65,7 @@ export default function AboutSection() {
             </motion.p>
             
             <motion.div 
-              className="w-24 h-px bg-gradient-to-r from-transparent via-amber-600 to-transparent mx-auto"
+              className="w-24 h-px bg-gradient-to-r from-transparent via-primary-dark to-transparent mx-auto"
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}

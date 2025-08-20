@@ -24,19 +24,16 @@ export default function HeroSlide({ id, title, description, image, button }: Her
       />
       
       {/* Elegant Overlay with Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/70" />
+      <div className="absolute inset-0 bg-gradient-to-b from-primary-dark/30 via-primary-dark/50 to-primary-dark/70" />
       
       {/* Content */}
       <div className="relative z-10 h-full flex items-center justify-center">
         <div className="text-center text-white max-w-5xl mx-auto px-8">
-          {/* Decorative Element */}
-          <div className="w-24 h-px bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto mb-8 animate-fade-in-up animation-delay-300"></div>
-          
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 leading-tight animate-fade-in-scale animation-delay-600 text-shadow-lg tracking-wide">
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 leading-tight animate-fade-in-scale animation-delay-600 tracking-wide text-[#D2DCEB] drop-shadow-[0_0_10px_rgba(210,220,235,0.8)] drop-shadow-[0_0_20px_rgba(210,220,235,0.6)]">
             {title}
-          </h1>
+            </h1>
           
-          <p className="font-body text-lg md:text-xl lg:text-2xl mb-12 text-stone-100 max-w-3xl mx-auto animate-fade-in-up animation-delay-900 leading-relaxed">
+          <p className="font-body text-lg md:text-xl lg:text-2xl mb-12 text-background-light max-w-3xl mx-auto animate-fade-in-up animation-delay-900 leading-relaxed">
             {description}
           </p>
           
@@ -44,15 +41,12 @@ export default function HeroSlide({ id, title, description, image, button }: Her
             <div className="animate-fade-in-up animation-delay-1200">
               <a
                 href={button.href}
-                className="btn-old-money inline-block"
+                className="btn-secondary inline-block"
               >
                 {button.text}
               </a>
             </div>
           )}
-          
-          {/* Decorative Element Bottom */}
-          <div className="w-16 h-px bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto mt-12 animate-fade-in-up animation-delay-1200"></div>
         </div>
       </div>
       

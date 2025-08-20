@@ -33,7 +33,7 @@ export default function Navbar() {
   const NavButton = ({ item, className }: { item: typeof navItems[0], className: string }) => (
     <button
       onClick={() => scrollToSection(item.section)}
-      className={`${className} text-white hover:text-amber-200 transition-elegant relative underline-elegant`}
+      className={`${className} text-white hover:text-background-light transition-elegant relative underline-elegant`}
     >
       {t(item.key)}
     </button>
@@ -42,8 +42,8 @@ export default function Navbar() {
   return (
     <nav className={`fixed top-0 left-0 w-full z-40 transition-all duration-500 ${
       isScrolled 
-        ? 'bg-stone-50/95 border-b border-stone-200 shadow-lg backdrop-blur-lg' 
-        : 'bg-black/20 backdrop-blur-md'
+        ? 'bg-light/95 border-b border-primary-medium shadow-lg backdrop-blur-lg' 
+        : 'bg-primary-dark/20 backdrop-blur-md'
     }`}>
       <div className="mx-auto px-0">
         <div className="flex justify-between items-center h-20 md:h-24 px-6 md:px-12 lg:px-16">
@@ -52,10 +52,10 @@ export default function Navbar() {
             onClick={() => scrollToSection('hero')}
             className="flex items-center space-x-3 text-2xl md:text-3xl font-accent font-bold transition-elegant group"
           >
-            <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-amber-600 to-amber-800 flex items-center justify-center group-hover:shadow-lg transition-luxury border border-amber-700">
+            <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-primary-dark to-primary-medium flex items-center justify-center group-hover:shadow-lg transition-luxury border border-primary-dark">
               <span className="text-white font-accent font-bold text-lg md:text-xl">BM</span>
             </div>
-            <span className={`${isScrolled ? 'text-stone-800' : 'text-white'} tracking-wider`}>
+            <span className={`${isScrolled ? 'text-primary-dark' : 'text-white'} tracking-wider`}>
               Bio Metal
             </span>
           </button>
@@ -67,7 +67,7 @@ export default function Navbar() {
                 key={item.key}
                 item={item}
                 className={`px-4 py-3 text-sm font-medium font-accent tracking-wider uppercase transition-elegant ${
-                  isScrolled ? 'text-stone-800 hover:text-blue-600' : 'text-white hover:text-amber-200'
+                  isScrolled ? 'text-primary-dark hover:text-primary-medium' : 'text-white hover:text-background-light'
                 }`}
               />
             ))}
@@ -78,7 +78,7 @@ export default function Navbar() {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`md:hidden p-3 transition-elegant ${
               isScrolled 
-                ? 'text-stone-800 hover:bg-stone-100' 
+                ? 'text-primary-dark hover:bg-background-light' 
                 : 'text-white hover:bg-white/10'
             }`}
             aria-expanded={isMobileMenuOpen}
@@ -96,12 +96,12 @@ export default function Navbar() {
 
         {/* Mobile menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden px-4 pt-4 pb-6 space-y-2 bg-stone-50/95 backdrop-blur-lg border-t border-stone-200 shadow-lg">
+          <div className="md:hidden px-4 pt-4 pb-6 space-y-2 bg-light/95 backdrop-blur-lg border-t border-primary-medium shadow-lg">
             {navItems.map((item) => (
               <NavButton 
                 key={item.key}
                 item={item}
-                className="block px-4 py-3 text-base font-medium font-accent text-stone-800 hover:text-blue-600 transition-elegant w-full text-left hover:bg-stone-100 tracking-wider uppercase"
+                className="block px-4 py-3 text-base font-medium font-accent text-primary-dark hover:text-primary-medium transition-elegant w-full text-left hover:bg-background-light tracking-wider uppercase"
               />
             ))}
           </div>

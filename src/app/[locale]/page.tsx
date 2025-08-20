@@ -19,7 +19,7 @@ export default function HomePage() {
         <AboutSection />
         <ServicesSection />
         <ProductsSection />
-        <ContactSection />
+        {/* <ContactSection /> */}
       </div>
     </div>
   );

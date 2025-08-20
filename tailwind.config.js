@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        main_light: '#D2DCEB',
         // Keep the default Tailwind colors and add old money specific colors directly
         'old-money': {
           50: '#faf9f7',
