@@ -1,6 +1,13 @@
 {
-    "HomePage": {
+  "HomePage": {
     "title": "مرحبا بالعالم!",
     "about": "اذهب إلى صفحة حول"
+  },
+  "Navbar": {
+    "home": "الرئيسية",
+    "about": "حولنا",
+    "services": "الخدمات",
+    "products": "المنتجات",
+    "contact": "اتصل بنا"
   }
 }
